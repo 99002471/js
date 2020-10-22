@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Classes.js"></script>
+    <script src="CommonFunctions.js"></script>
+    <script>
+        const emp=new employee(111,"adi","delhi")
+        console.log(emp.empName);
+        console.log(emp.empId);
+        console.log(emp.empAddress);
+        function displayRecords()
+        {
+            let row="<tr><td>"+e.empid+"</td>";
+                row+="<td>"+e.empName+"</td>";
+                row+="<td>"+e.empAddress+"</td></tr>";
+                $get("tblRecords").innerHTML+=row;
+            row="<tr><td>"+emp.empid+"</td>";
+                row+="<td>"+emp.empName+"</td>";
+                row+="<td>"+emp.empAddress+"</td></tr>";
+                $get("tblRecords").innerHTML+=row;
+        }
+    </script>
+
+</head>
+<body onload="displayRecords()">
+    <table id="tblRecords" border="1">
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Address</th>
+        </tr>
+    </table>
+    
+</body>
+</html>

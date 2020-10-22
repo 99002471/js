@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accessing DOM Elements</title>
+</head>
+<body>
+    <h1>Accessing DOM Elements</h1>
+    <hr>
+    <div>
+        <p id="pName">Name is aditya</p>
+        <p id="pAddress">Address from hyderabad</p>
+        <p id="pSalary">Salary is Rs.10,000</p>
+    </div>
+    <hr>
+    <div>
+        <ul id="lsdata">
+
+        </ul>
+
+    </div>
+    <script>
+        /*let p1=document.getElementById("pName");
+        console.log(p1.innerText)
+        p1=document.getElementById("pAddress");
+        console.log(p1.innerText)
+        p1=document.getElementById("pSalary");
+        console.log(p1.innerText)*/
+        const items=[]
+        let processing=true
+        const list=document.getElementById("lsdata");
+        do
+        {
+            items.push(prompt("enter the items to be added"))
+            list.innerHTML=" ";
+            for(const item in items)
+            {
+                list.innerHTML+="<li>" + items +"<li>";
+            }
+            processing=confirm("do you want to add one more?")
+        }while(processing);
+    </script>
+</body>
+</html>

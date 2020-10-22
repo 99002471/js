@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="CommonFunctions.js"></script>
+        <style>
+            *{
+                background-color: bisque;
+                font-size:24pt;
+                padding: 5px;
+                margin: 5px;  
+            }
+            button{
+                background-color: lightblue;
+                width: 75px;
+                height: 50px;
+                color:blue;
+            }
+            input{
+                height: 45px;
+            }
+            input:focus{
+                background-color: goldenrod;
+                color:beige;
+            }
+        </style>
+        <script>
+            function onAdd()
+            {
+            const firstval = $get("val1").value;
+            const secondval = $get("val2").value;
+            const result = addfunc(firstval, secondval);
+            $get("spResult").innerText = result;
+
+            }
+            function onSub()
+            {
+            const firstval = $get("val1").value;
+            const secondval = $get("val2").value;
+            const result = subFunc(firstval, secondval);
+            $get("spResult").innerText = result;
+
+            }
+            function onMul()
+            {
+            const firstval = $get("val1").value;
+            const secondval = $get("val2").value;
+            const result = mulFunc(firstval, secondval);
+            $get("spResult").innerText = result;
+
+            }
+            function onDiv()
+            {
+            const firstval = $get("val1").value;
+            const secondval = $get("val2").value;
+            const result = divFunc(firstval,secondval);
+            $get("spResult").innerText = result;
+
+            }
+        </script>
+    </head>
+<body>
+    <div>
+        <h1>Math Calc Program</h1>
+        <hr>
+        <p>Enter the First value: <input type="number" id="val1"></p>
+        <p>Enter the Second value: <input type="number" id="val2"></p>
+       <p>
+       <button onclick="onAdd()">+</button>
+       <button onclick="onSub()">-</button>
+       <button onclick="onMul()">X</button>
+       <button onclick="onDiv()">/</button>
+       </p>
+        <p>
+            The Result:
+            <span id="spResult"></span>
+        </p>
+    </div>   
+   </body>
+   </html>

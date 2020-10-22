@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            /*const ele=[1,2,3,"aditya"];
+            for(const x of ele)
+            {
+                console.log(x);
+            }
+            const names=new Array(5);
+            for(let i=0;i<names.length;i++)
+            {
+                names[i]=prompt("enter the values")
+            }
+            for(const y of names)
+            {
+                console.log(y)
+            }*/
+            let basket=[];
+            let index=0;
+            do{
+                const item=prompt("Enter the fruit to buy");
+                basket.push(item);//adds an item to the array..
+                //try to add the item using unshift method
+                index++;
+            }while(index!=5);
+            //push adds the items to the bottom of the array
+            //unshift adds the item to the top of teh array
+            //pop is used torempobve the last item of the array
+            //shift is used
+        </script>
+    </head>
+    <body>
+        <h3>List of Fruits in Your basket!</h3>
+        <ol type="1">
+            <script>
+            for (const item of basket){
+                document.write("<li>"+item+"</li>")
+            }
+        </script>
+        </ol>
+    </body>
+</html>
